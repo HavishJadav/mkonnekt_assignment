@@ -64,7 +64,7 @@ cd mkonnekt_assignment
 
 ```powershell
 # Windows PowerShell
-python -m venv .venv
+python -m venv venv
 .\venv\Scripts\activate
 pip install -r requirements.txt
 ```
@@ -81,12 +81,9 @@ Create a `.env` file (or set vars in your shell). Minimal required for data:
 
 ```env
 # Required Sales API endpoint (single URL form)
-MKONNEKT_ORDERS_RECENT_URL=
+MKONNEKT_ORDERS_RECENT_URL=your_url_here
 MKONNEKT_TIMEOUT=10
-
-# Optional: Gemini for natural-language summaries
 GEMINI_API_KEY=your_api_key_here
-# Or: GOOGLE_API_KEY=your_api_key_here
 ```
 
 ---
