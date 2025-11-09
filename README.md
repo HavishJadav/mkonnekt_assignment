@@ -39,7 +39,7 @@ Example questions:
 ## 📦 Project structure
 
 ```
-mkonnect_assignment/
+mkonnekt_assignment/
 ├─ main.py                 # CLI orchestrator
 ├─ sales_api.py            # Fetch recent orders from Mkonnekt API (with timeout)
 ├─ intent_router.py        # Hybrid NLP + heuristics for intent detection
@@ -54,7 +54,13 @@ mkonnect_assignment/
 
 ## ⚙️ Setup
 
-1) Python environment
+1) Git clone
+```powershell
+git clone https://github.com/HavishJadav/mkonnekt_assignment.git
+cd mkonnekt_assignment
+```
+
+2) Python environment
 
 ```powershell
 # Windows PowerShell
@@ -63,13 +69,13 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-2) Install the spaCy English model (required for NLP intent/date hints)
+3) Install the spaCy English model (required for NLP intent/date hints)
 
 ```powershell
 python -m spacy download en_core_web_sm
 ```
 
-3) Configure environment variables (.env)
+4) Configure environment variables (.env)
 
 Create a `.env` file (or set vars in your shell). Minimal required for data:
 
