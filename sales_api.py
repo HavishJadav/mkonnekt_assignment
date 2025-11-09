@@ -2,8 +2,24 @@ import requests
 
 DEFAULT_TIMEOUT = 10
 
+import os
+import requests
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except Exception:
+    # If python-dotenv isn't installed, environment variables can still be provided by the OS
+    pass
+
+DEFAULT_TIMEOUT = int(os.getenv("MKONNEKT_TIMEOUT", "10"))
+
+
 def get_recent_orders():
-    url = "https://sandbox.mkonnekt.net/ch-portal/api/v1/orders/recent"
+    url = os.getenv("MKONNEKT_ORDERS_RECENT_URL")
+    if not url:
+        print("⚠️ Error: Missing MKONNEKT_ORDERS_RECENT_URL. Please set it in your environment or .env file.")
+        return {"orders": [], "meta": {}}
     try:
         response = requests.get(url, timeout=DEFAULT_TIMEOUT)
         response.raise_for_status()

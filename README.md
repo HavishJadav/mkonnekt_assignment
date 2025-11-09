@@ -59,7 +59,7 @@ mkonnect_assignment/
 ```powershell
 # Windows PowerShell
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+.\venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -69,18 +69,18 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-3) Configure Gemini for natural summaries
+3) Configure environment variables (.env)
 
-Set one of the following environment variables with your key:
+Create a `.env` file (or set vars in your shell). Minimal required for data:
 
-- `GEMINI_API_KEY` (preferred)
-- `GOOGLE_API_KEY`
+```env
+# Required Sales API endpoint (single URL form)
+MKONNEKT_ORDERS_RECENT_URL=
+MKONNEKT_TIMEOUT=10
 
-You can set it in a local `.env` file or in your shell before running.
-
-```powershell
-# Example .env content
+# Optional: Gemini for natural-language summaries
 GEMINI_API_KEY=your_api_key_here
+# Or: GOOGLE_API_KEY=your_api_key_here
 ```
 
 ---
