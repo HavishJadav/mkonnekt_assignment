@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment files / secrets
+.env
+*.env
+.env.*
+
+# Build / packaging
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Caches
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.ipynb_checkpoints/
+.cache/
+
+# Logs / profiles
+*.log
+*.tmp
+*.pid
+*.prof
+profiling/
+
+# IDE / Editor
+.vscode/
+.vscode-test/
+.idea/
+*.swp
+*.swo
+*.orig
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Data files (you may still choose to ignore large raw exports)
+# Keep results/ tracked so assignment screenshots can be committed
+# results/
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.db
