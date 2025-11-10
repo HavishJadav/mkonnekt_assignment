@@ -152,7 +152,7 @@ When the Gemini key is present, results are summarized into friendly text. If Ge
 
 ---
 
-## 🖼️ Your example runs (add screenshots)
+## 🖼️ Examples
 
 Add your own queries and screenshots here. Place image files under `results/` so they can be versioned with the project.
 
